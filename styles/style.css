@@ -1,0 +1,271 @@
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --font-primary: "Poppins", sans-serif;
+
+  --color-primary-red: hsl(0, 100%, 74%);
+  --color-primary-green: hsl(154, 59%, 51%);
+  --color-accent-blue: hsl(248, 32%, 49%);
+  --color-neutral-dark-blue: hsl(249, 10%, 26%);
+  --color-neutral-grayish-blue: hsl(246, 25%, 77%);
+
+  --shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+}
+
+/* Base
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: var(--color-primary-3);
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: #1eaedb;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #0fa0ce;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+p {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: var(--font-primary);
+  margin-top: 0;
+}
+
+/* Utilities
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  max-width: 72rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8.8rem;
+  margin-bottom: 6.8rem;
+}
+
+.u-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-mb-sm {
+  margin-bottom: 8px;
+}
+
+.u-mb-md {
+  margin-bottom: 1.6rem;
+}
+
+.u-mb-lg {
+  margin-bottom: 2.4rem;
+}
+
+.u-mb-xl {
+  margin-bottom: 6.4rem;
+}
+
+/* Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  background: var(--color-primary-red) url(/images/bg-intro-mobile.png) top
+    center/cover no-repeat;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro__headline {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.3px;
+}
+
+.intro__description {
+  font-size: 1.6rem;
+}
+
+.form__headline {
+  font-size: 1.5rem;
+  background-color: var(--color-accent-blue);
+  padding: 1.8rem 6.6rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.267857px;
+  box-shadow: var(--shadow);
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2.4rem;
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__field input {
+  border-radius: 5px;
+  border: 1px solid #dedede;
+  height: 5.6rem;
+  padding: 1.5rem 1.9rem;
+  font-weight: 600;
+  color: var(--color-neutral-dark-blue);
+  outline: 0 none;
+  width: 100%;
+  transition: all .2s;
+}
+
+.form__field input:focus {
+  border: 1px solid var(--color-accent-blue);
+}
+
+.form__field img {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+}
+
+.form__field .failure-icon {
+  display: none;
+}
+
+.error {
+  text-align: right;
+  color: var(--color-primary-red);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.form__field button {
+  padding: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--color-primary-green);
+  cursor: pointer;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.form__field button:hover,
+.form__field button:focus {
+  background: #77e2b3;
+}
+
+.form_disclaimer {
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--color-neutral-grayish-blue);
+}
+
+.form_disclaimer span {
+  color: var(--color-primary-red);
+  font-weight: 700;
+  line-height: 2.1rem;
+  transition: all 0.2s;
+}
+
+.form_disclaimer span:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 72rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    background: var(--color-primary-red) url(/images/bg-intro-desktop.png) top
+      center/cover no-repeat;
+  }
+
+  .container {
+    max-width: 111rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .site__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    gap: 4.5rem;
+  }
+
+  .intro {
+    text-align: left;
+  }
+
+  .intro__headline {
+    font-size: 5rem;
+    line-height: 5.5rem;
+    letter-spacing: -0.520833px;
+  }
+
+  .intro__description {
+    font-size: 1.6rem;
+  }
+
+  .form {
+    padding: 4rem;
+
+    gap: 2rem;
+  }
+
+  .form input {
+    padding: 1.5rem 3.2rem;
+  }
+}
